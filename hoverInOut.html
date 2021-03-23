@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("img").hover(function(){
+                    src = $(this).attr("src");
+                    $(this).attr("src", $(this).attr("data-alt-src"));
+                    },function(){
+                    $(this).attr("src", src);
+                });
+            });
+        </script>
+        <style>
+            img{
+                width: 300px;   
+                min-height: 300px;
+            }
+            li{
+                list-style: none;
+                display: inline-block;
+                border: 2px solid black;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><img src="images/adventure-cat.png"  data-alt-src="images/aidorucat.png"></li>
+            <li><img src="images/cooler.png"  data-alt-src="images/dojocat.jpg"></li>
+            <li><img src="images/ironcat.png"  data-alt-src="images/mario.png"></li>
+            <li><img src="images/kantana.jpg"  data-alt-src="images/visionary.jpg"></li>
+        </ul>
+    </body>
+</html>

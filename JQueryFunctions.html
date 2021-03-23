@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTC-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.click h1').click(function(){
+                    $(this).hide(); 
+                })
+                $('.click h2').click(function(){
+                    $('.click h1').show(); 
+                })
+                $('.toggle').click(function(){
+                    $('.click h1, .click h2').toggle(); 
+                })
+                $('.slideDown').click(function(){
+                    $('.slide p').slideDown(); 
+                })
+                $('.slideUp').click(function(){
+                    $('.slide p').slideUp(); 
+                })
+                $('.slideToggle').click(function(){
+                    $('.slide p').slideToggle(); 
+                })
+                $('.fadeIn').click(function(){
+                    $('.fade p').fadeIn(); 
+                })
+                $('.fadeOut').click(function(){
+                    $('.fade p').fadeOut(); 
+                })
+                $('.addRed').click(function(){
+                    $('.addClass h1').addClass('color-1'); 
+                })
+                $('.before').click(function(){
+                    $('.addElements .base').before('Before'); 
+                })
+                $('.after').click(function(){
+                    $('.addElements .base').after('After'); 
+                })
+                $('.append').click(function(){
+                    $('.addElements .base').append('Append'); 
+                })
+                $('.html').click(function(){
+                    $('.manipulate p').html('<h1>Hello</h1>'); 
+                })
+                $('.attr').click(function(){
+                    $('.manipulate p').attr('style','color:blue'); 
+                })
+                $('.val').click(function(){
+                    $('input:text').val('Sanchez');
+                })
+                $('.text').click(function(){
+                    $('.manipulate p').text('Hello World'); 
+                })
+            });
+        </script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            a{
+            text-decoration: none;
+            color: white;
+            background-color: grey;
+            padding: 5px;
+            display: inline-block;
+            margin: 10px;
+            }
+            div{
+                border: 2px solid black;
+                margin: 20px;
+                padding: 20px;
+            }
+            .color-1{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="click">
+            <h1>CLICK ME TO HIDE</h1>
+            <h2>CLICK ME TO SHOW</h2>
+            <a class="toggle">Toggle</a>
+        </div>
+        <div class="slide">
+            <p>HELLO!</p>
+            <a class="slideUp" href="#">SlideUP</a>
+            <a class="slideDown" href="#">SlideDown</a>
+            <a class="slideToggle" href="#">SlideToggle</a>
+        </div>
+        <div class="fade">
+            <p>HELLO WORLD!!</p>
+            <a class="fadeIn" href="#">FadeIn</a>
+            <a class="fadeOut" href="#">FadeOut</a>
+        </div>
+        <div class="addClass">
+            <h1>RED</h1>
+            <a class="addRed" href="#">Color:Red</a>
+        </div>
+        <div class="addElements">
+            <h1 class="base">BASE</h1>
+            <ul>
+            <a class="before" href="#">Add Before</a>
+            <a class="after" href="#">Add After</a>
+            <a class="append" href="#">append</a>
+            </ul>
+        </div>
+        <div class="manipulate">
+            <p style="color: black">Manipulate</p> 
+            <input type="text" name="user" value="Name">
+            <a class="html" href="#">Html</a>
+            <a class="attr" href="#">Attr</a>
+            <a class="val" href="#">Val</a>
+            <a class="text" href="#">Text</a>
+        </div>
+    </body>
+</html>

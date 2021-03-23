@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTC-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+               $(document).ready(function(){
+                    $("img").click(function(){
+                        $(this).hide();
+                    })
+                    $(".btn").click(function(){
+                        $("img").show();
+                    })
+               });
+        </script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            img{
+                width: 300px;
+                height: 300px;
+                border: 2px solid black;
+            }
+            ul{
+                width: 70%;
+                margin: 0 auto;
+            }
+            a{
+                display: inline-block;
+                padding: 30px;
+                background-color: green;
+                color: white;
+                border:2px solid black;
+            }
+            li{
+                display: inline-block;
+                width: 300px;
+                height: 300px;
+                margin: 2px;
+            }
+        </style>
+    </head>
+    <body>
+    <ul>
+        <li><img src="ninja.png"></li>
+        <li><img src="ninja.png"></li>
+        <li><img src="ninja.png"></li>
+        <li><img src="ninja.png"></li>
+        <li><img src="ninja.png"></li>
+        <li><img src="ninja.png"></li>
+        <li><img src="ninja.png"></li>
+        <li><img src="ninja.png"></li>
+        <li><a class="btn">Restore</a></li>
+    </ul>
+    </body>
+</html>
